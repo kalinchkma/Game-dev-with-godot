@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7/xAeJHZxAmn1eg3BRwJrfEgrCzB471cuXFLBC2gPiwOKeJooytpyo81JA9BH7F/ynv7wvXgSb8NRqbuoke4cA==",
+  "success": true,
+  "projectFilePath": "/home/nanashi/Desktop/Game dev/project3/Project 3.csproj",
+  "expectedPackageFiles": [
+    "/home/nanashi/snap/gd-godot-engine-mono-snapcraft/23/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "/home/nanashi/snap/gd-godot-engine-mono-snapcraft/23/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

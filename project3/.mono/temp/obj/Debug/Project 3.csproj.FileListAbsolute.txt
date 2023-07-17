@@ -1,0 +1,9 @@
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/bin/Debug/Project 3.dll
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/bin/Debug/Project 3.pdb
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.csproj.AssemblyReference.cache
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.GeneratedMSBuildEditorConfig.editorconfig
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.AssemblyInfoInputs.cache
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.AssemblyInfo.cs
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.csproj.CoreCompileInputs.cache
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.dll
+/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/Debug/Project 3.pdb

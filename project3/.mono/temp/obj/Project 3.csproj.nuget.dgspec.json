@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/nanashi/Desktop/Game dev/project3/Project 3.csproj": {}
+  },
+  "projects": {
+    "/home/nanashi/Desktop/Game dev/project3/Project 3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/nanashi/Desktop/Game dev/project3/Project 3.csproj",
+        "projectName": "Project 3",
+        "projectPath": "/home/nanashi/Desktop/Game dev/project3/Project 3.csproj",
+        "packagesPath": "/home/nanashi/snap/gd-godot-engine-mono-snapcraft/23/.nuget/packages/",
+        "outputPath": "/home/nanashi/Desktop/Game dev/project3/.mono/temp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/nanashi/snap/gd-godot-engine-mono-snapcraft/23/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.2, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/gd-godot-engine-mono-snapcraft/23/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

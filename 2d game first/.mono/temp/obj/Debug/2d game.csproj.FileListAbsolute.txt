@@ -1,0 +1,9 @@
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/bin/Debug/2d game.dll
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/bin/Debug/2d game.pdb
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.csproj.AssemblyReference.cache
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.GeneratedMSBuildEditorConfig.editorconfig
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.AssemblyInfoInputs.cache
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.AssemblyInfo.cs
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.csproj.CoreCompileInputs.cache
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.dll
+/home/nanashi/Desktop/Game dev/2d game first/.mono/temp/obj/Debug/2d game.pdb

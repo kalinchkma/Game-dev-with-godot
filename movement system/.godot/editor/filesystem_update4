@@ -1,0 +1,6 @@
+res://AMSG_Examples/Maps/MovementTestMap.tscn
+res://AMSG_Examples/Maps/default_env.tres
+res://addons/PoseWarping/MotionWarping.tscn
+res://AMSG_Examples/Character/mixamo_character.tscn
+res://AMSG_Examples/Player/Player.tscn
+res://AMSG_Examples/Maps/main.gd
