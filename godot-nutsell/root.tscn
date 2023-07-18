@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhuh2rujsbrd5"]
+[gd_scene load_steps=11 format=3 uid="uid://dhuh2rujsbrd5"]
 
 [ext_resource type="Script" path="res://scripts/Root.gd" id="1_120e6"]
 [ext_resource type="Script" path="res://scripts/Parent.gd" id="2_tmxmm"]
@@ -6,8 +6,10 @@
 [ext_resource type="Script" path="res://scripts/GrandChild1.gd" id="4_vn4ha"]
 [ext_resource type="Script" path="res://scripts/Child2.gd" id="5_inpt3"]
 [ext_resource type="Script" path="res://scripts/GreatGrandChild1.gd" id="5_qiipj"]
+[ext_resource type="Texture2D" uid="uid://dulgxqsgrqte1" path="res://icon.svg" id="6_1crf2"]
 [ext_resource type="Script" path="res://scripts/GrandChild2.gd" id="6_kkr3p"]
 [ext_resource type="Script" path="res://scripts/Child2GrandChild1.gd" id="8_smhwg"]
+[ext_resource type="Script" path="res://scripts/GUI.gd" id="9_ac7jc"]
 
 [node name="Root" type="Node"]
 script = ExtResource("1_120e6")
@@ -24,6 +26,10 @@ script = ExtResource("4_vn4ha")
 [node name="GreatGrandChild1" type="Node" parent="Parent/Child1/GrandChild1"]
 script = ExtResource("5_qiipj")
 
+[node name="Sprite2D" type="Sprite2D" parent="Parent/Child1/GrandChild1/GreatGrandChild1"]
+position = Vector2(458, 204)
+texture = ExtResource("6_1crf2")
+
 [node name="GrandChild2" type="Node" parent="Parent/Child1"]
 script = ExtResource("6_kkr3p")
 
@@ -32,3 +38,10 @@ script = ExtResource("5_inpt3")
 
 [node name="Child2GrandChild1" type="Node" parent="Parent/Child2"]
 script = ExtResource("8_smhwg")
+
+[node name="GUI" type="Control" parent="Parent"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_ac7jc")

@@ -178,3 +178,63 @@
 	- Delta Time:
 		- Delta time (elapsed time) is a concept used by programmers in relation to hardware and network responsiveness
 		- Delta time comes from the physics/math formula for "The Change in Time"
+		- When to use it:
+			- Movement, use it for movement. Any physics formula dealing with time
+			- When you want to be frame rate independent
+		- Two method pass delta time `_process` and `_physics_process`
+	- `_process(delta)` virtual method:
+		- Gives us the ability to be frame independent
+		- If overridden by Node, it will run at every frame possible
+		- When to use it:
+			- When you need an action called or something updated at the fastest possible rate (Real Time)
+			- Smoothest movement possible that the physics process virtual method is unable to output (Not movement)
+			- The delta value is not reliable, it prefers speed over consistency. it sometime gives 0 value of delta time
+			- However, the default settings for New project somtimes has `_process(delta)` run slower than `_physics_process(delta)`
+			- process virtial method is not sync to hardware
+			- run faster remove vsyn option from project setting
+	- `_physics_process(delta)` virtual method:
+		- Gives us the ability to be frame independent
+		- If ovverridden by node, delta will be capped at 1/60 (Default), 60 frames per second 0.1 seconds per 6 frames(delta is constant)
+		- Frame rate is synced to the physices
+		- When to use it:
+			- Dealing with physics, such as movement
+			- Custom Timers (Not using the Timer Node)
+			- Ideal for Game Logic (Path Finding, updating positions)
+			- Delta is capped a 1/60
+			- You may not get the smoothest "visual animations(varies)"
+	- When to use _process or _physics_process:
+		- start our with _physics_process(delta)
+		- If it feels weird upgrade to _process(delta)
+		- If game is to slow and bottleneck is _process(delta), consider switching it back to _physics_process(delta)
+		
+	- Player Input:
+		- Mouse Movement, Mouse Clicks, Keyboard inputs, Controller Inputs ets
+		- The easiest way to handle keyboard input is through the Godot Application, in Project settings, under the Input Map tab
+		- Godot provide 4 Common Input Virtual Methods from Node Class
+			- _input(event):
+			- _gui_input(event):
+			- _unhandled_input(event):
+			- _unhandled_key_input(event):
+		- _input(event):
+			- This is the first input method that gets called
+			- You are free to put custom player movement code here
+		- _gui_input(event):
+			- This is the second thing to be called the _input(event) was unhandled (propagation was not manually stopped)
+			- This is for control Nodes (Nodes that inherit the control Node)
+			- Propagation of the event handling chain will be stopped for you, no need to manually handle that
+		- _unhandled_input(event):
+			- Unhandled input is the third input event handler to be called
+			- Best to use this for player input controls. That way player controls dose not interfere with Control Node input handler
+			  eg. player move up,down,left roght
+		- _unhandled_key_input(event):
+			- Will only get called if a key press was/is detected (Mouse movements dose not activate this function)
+			- Consider using this for input dealing with key presses
+		- CollisionObject._input_event():
+			- Fourth Input handler to be called
+			- Collision Object is a Node class, inherited by Area and PhysicsBody
+		- Viewport:
+			- Last to be called
+			- If input chain has been unhandled, the input event will be passed to the next viewport on the tree
+		- Manually Stop the input event Propagation:
+			- We must stop it through the root Viewport Singleton. Any node in the scene tree can call
+			- `self.get_tree().get_root().set_input_as_handled()`

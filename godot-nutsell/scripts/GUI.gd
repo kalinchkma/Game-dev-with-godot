@@ -1,15 +1,15 @@
-extends Node
+extends Control
 
-func _enter_tree():
-	print(self.name,"Enter  in ther tree")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(self.name,"ready function call")
+	print(self.name, "is ready")
 
 func _input(event):
 	print(self.name,"input is called")
 
+func _gui_input(event):
+	print(self.name,"gui_input is called")
 
 func _unhandled_input(event):
 	print(self.name, "unhandled_input called")
