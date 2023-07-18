@@ -271,3 +271,11 @@
 			- This is preferred method
 		- Object.free():
 			- Deletes the Object from memory. Any pre-existing reference to the freed object will become invalid (no built in safty neasures)
+		- When to use queue_free() method:
+			- Memory management is a complex topic and its best to start by deleting everything that leaves the scene tree, 
+			  Best not to have Memory leaks
+			  ```
+				func _exit_tree():
+					self.queue_free()
+			  ```
+			
