@@ -102,3 +102,37 @@
 - If the root viewport is not the node at the top of your scenes, nothing will be seen on the player screen
 - The root viewport cannot be created manually by the programmer, this is created automatically by the scene tree
 
+#### Game Loop:
+- At its core, all games can be understood as having one function that contains all the game logic
+- The cycle of running this function repeatedly is called a game loop
+- Everything on your Computer Screen is justa static image that updates itself repeatedly giving the illusion of movement
+- Computers are just like movies, still pictures being shown at fast speeds
+- Game loop Pseudocode (Simplified):
+	- While(userNotQuitOrCrash):
+		- updatePhysics()
+		- Scene.updateScenePicture()
+		- passToNodeScripts(userInput)
+		- performanceUpdate()
+		- userNotQuiteOrCrash = updateAppState()
+- Update Physics(under the hood)
+- Update Our Scene(object moving)
+- Pass inputs to scripts(player movement)
+- Performance Updates (under the hood, such as remove unused objects, memory managements, culling, etc.)
+- Repeatedly Loop until player quits or craches
+- We have to be mindful of how we code. A while,a big for loop, complex mathematical algorithms/calculation can crash our game
+- A good understanding of Scripts Lifecycles and where certain lines of code should be placed will help a lot
+
+#### Nodes:
+- Nodes Represent Behavior
+- Nodes give you functionality. Draw a sprite simuate physics, manage player speed, etc
+- Game Engine features Rely on Nodes
+#### Resources:
+- Resources are Data Container
+- All they do is hold data. Nodes rely on the data contained in resourcesy
+
+#### Script Lifecycles:
+- Most game engines need to run scripts onto game objects
+- In games, our game objects, such as real life, have a time to be born, to flourish, and then to perish
+- Basic Script Life Cycle
+	- Create/Start -> Exits -> Destroy/End
+
