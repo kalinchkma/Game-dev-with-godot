@@ -246,6 +246,7 @@
 				- `InputEventKey` is key inputs
 				- `InputEventMouse` is mouse inputs
 				```
+				Example:
 				if event is InputEventKey:
 					if event.get_physical_keycode_with_modifiers() == KEY_ALT:
 						# do somethings
