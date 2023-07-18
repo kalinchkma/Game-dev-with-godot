@@ -275,7 +275,8 @@
 			- Memory management is a complex topic and its best to start by deleting everything that leaves the scene tree, 
 			  Best not to have Memory leaks
 			  ```
-				func _exit_tree():
-					self.queue_free()
+				Example:
+					func _exit_tree():
+						self.queue_free()
 			  ```
 			
