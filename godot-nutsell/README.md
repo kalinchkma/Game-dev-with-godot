@@ -62,3 +62,25 @@
 	- Position += Velocity * DeltaTime
 	- Velocity += Gravity * DeltaTime
 
+#### Node:
+- Nodes can only have 1 parent (tree like structure)
+- The node without a parent is called the root node
+- Node inherit the transforms of their parents (consider the parent position as origin)
+- The root node should manage creation and deletion of their child nodes
+- Think of a root node as a "manager" class
+- All scene needs a root node
+
+#### Scenes:
+- A tree of Nodes is called a Scene
+- Every scene must have 1 root node
+- Scenes can be saved to disk and instanced into other scences
+- If you want to run a game, you must have 1 scene
+- A single project can have multiple scenes
+- Scenes can be switched, loaded and reloaded
+- To add a new scene we need to create a file with the .tscn filename extension
+- One cool feature is that we can use a Scene Tree to organize our nodes into groups
+- You can the iterate these groups or even call methods and set properties on the group members at once
+- Scene are important to create a proper games
+
+
+
