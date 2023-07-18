@@ -94,5 +94,11 @@
 	- A Scene needs a root node (class Node)
 	- In order for you the programmer to havea functioning game; you need to provide a scene
 	- SceneTree is a singleton
-	
+#### Root Viewport:
+- Root Viewport is always at the top of your scenes
+- Your nodes will always add itself to your root viewport as a child
+- Root viewport contains the main viewport
+- Anything that is a child of the viewport is drawn inside of the root viewport (default)
+- If the root viewport is not the node at the top of your scenes, nothing will be seen on the player screen
+- The root viewport cannot be created manually by the programmer, this is created automatically by the scene tree
 
