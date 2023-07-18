@@ -138,5 +138,18 @@
 - Godot Script Lifecycles
 	- A scene is loaded from disk or created by a script
 	- The root node of the newly instantiated scene is added as a chile of the root viewport or to any child of it
+	- Every node of the newly added scene will receive the enter_tree() notification in top to bottom order.
+	- The ready() notification is called when a node and all its children are inside the active scene
+	- While the object is active in the scene callbacks such as the _input(), _process(), _physics_process() are called if used.
+	- When a scene is removed, they receive the "exit scene" notification in bottom to top order
+	- All classes that inherit from Node class is allow for Lifecycles
+	- Node class Provides the virtual functions we can replace and use to write code during certain steps in the cycle
+	- Order of virtual function that call first in godot scripts:
+		1. "Enter Tree"
+		2. "Ready"
+		3. "Input"
+		4. "Physics Processing"
+		5. "Process"
+		6. "Exit Tree"
 	
 
