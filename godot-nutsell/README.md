@@ -151,5 +151,13 @@
 		- "Physics Processing" | "_physics_process()"
 		- "Process" | "_process()"
 		- "Exit Tree" | "_exit_tree()"
-	
+- Virtual Method:
+	- Virtual method allows subclasses of the base class type that has the virtual method to override the method
+	- For the purpopses of *Godot, all virtual method means is that its methods will be called if the Node is active in the SceneTree
+	- Enter Tree Virtual method( _enter_tree() ):
+		- Enter Tree is a virtual method, the Node class and all its subclasses provides this virtual method
+		- When to use it:
+			- If you need property values reset and/or some type of action to happened immediately (every
+			  time the node is active on the Scence Tree)
+			- Good for Scenes (Gameobjects) that will be active and inactive, and never released from memory
 

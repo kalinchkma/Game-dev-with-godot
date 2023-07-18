@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhuh2rujsbrd5"]
+
+[ext_resource type="Script" path="res://scripts/Root.gd" id="1_120e6"]
+[ext_resource type="Script" path="res://scripts/Parent.gd" id="2_tmxmm"]
+[ext_resource type="Script" path="res://scripts/Child1.gd" id="2_urtmy"]
+[ext_resource type="Script" path="res://scripts/GrandChild1.gd" id="4_vn4ha"]
+[ext_resource type="Script" path="res://scripts/Child2.gd" id="5_inpt3"]
+
+[node name="Root" type="Node"]
+script = ExtResource("1_120e6")
+
+[node name="Parent" type="Node" parent="."]
+script = ExtResource("2_tmxmm")
+
+[node name="Child1" type="Node" parent="Parent"]
+script = ExtResource("2_urtmy")
+
+[node name="GrandChild1" type="Node" parent="Parent/Child1"]
+script = ExtResource("4_vn4ha")
+
+[node name="Child2" type="Node" parent="Parent"]
+script = ExtResource("5_inpt3")
