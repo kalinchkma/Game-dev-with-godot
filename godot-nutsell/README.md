@@ -261,3 +261,13 @@
 		- It called when node exit the seen tree
 		- We can notify other code that we are leaving the scene tree, we can store our node in an array
 		- The easiest thing to do as a bigginer is to delete the node from memory after it has left the scene tree
+		- A Node leaving the scene tree dose not delete the Node/Object from memory, you must manually manage memory yourself
+		- Two ways of deleting node from memory:
+			- Node.queue_free()
+			- Object.free()
+		- Node.queue_free():
+			- Queues a node for deletion at the end of the current frame. When deleted, all children nodes will be deleted. This method makes sure
+			  it is ok to delete the Node, and safer than using Object.free()
+			- This is preferred method
+		- Object.free():
+			- Deletes the Object from memory. Any pre-existing reference to the freed object will become invalid (no built in safty neasures)
