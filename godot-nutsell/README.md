@@ -82,5 +82,17 @@
 - You can the iterate these groups or even call methods and set properties on the group members at once
 - Scene are important to create a proper games
 
-
+#### Scene Tree vs Scene:
+- A scene is a collection of Nodes
+	- Your game world is a scene
+	- Your different enemies can be a scene
+	- Everything you can make in Godot is a Scene
+- Scene Tree:
+	- The scene tree is a class and the most important one
+	- Scene Tree in Godot is the default game loop that is provided to the OS class (When your game starts the OS class is the only thing running)
+	- When you start a game, your game usually asks you for a default scene to run
+	- A Scene needs a root node (class Node)
+	- In order for you the programmer to havea functioning game; you need to provide a scene
+	- SceneTree is a singleton
+	
 
