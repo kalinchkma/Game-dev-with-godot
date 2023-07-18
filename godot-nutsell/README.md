@@ -145,11 +145,11 @@
 	- All classes that inherit from Node class is allow for Lifecycles
 	- Node class Provides the virtual functions we can replace and use to write code during certain steps in the cycle
 	- Order of virtual function that call first in godot scripts:
-		 1 "Enter Tree"
-		 2 "Ready"
-		 3 "Input"
-		 4 "Physics Processing"
-		 5 "Process"
-		 6 "Exit Tree"
+		- "Enter Tree"
+		- "Ready"
+		- "Input"
+		- "Physics Processing"
+		- "Process"
+		- "Exit Tree"
 	
 
