@@ -238,3 +238,21 @@
 		- Manually Stop the input event Propagation:
 			- We must stop it through the root Viewport Singleton. Any node in the scene tree can call
 			- `self.get_tree().get_root().set_input_as_handled()`
+		- Handling inputs:
+			- InputEventWithModifiers for leptop and desktop devices
+			- InputEventJoypedButton for joystick etc
+			- Input types for pcs:
+				- `InputEventGesture` is trackpad gestures
+				- `InputEventKey` is key inputs
+				- `InputEventMouse` is mouse inputs
+				```
+				if event is InputEventKey:
+					if event.get_physical_keycode_with_modifiers() == KEY_ALT:
+						# do somethings
+					elif event.get_physical_keycode_with_modifiers() == KEY_CTRL:
+						if not has_node("Child1"): # check this children has or not in the scene
+							self.add_child(Child1)
+							move_child(Child1, 0)
+				else:
+					print(event)
+				```
