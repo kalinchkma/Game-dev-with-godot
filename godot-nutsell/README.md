@@ -135,4 +135,8 @@
 - In games, our game objects, such as real life, have a time to be born, to flourish, and then to perish
 - Basic Script Life Cycle
 	- Create/Start -> Exits -> Destroy/End
+- Godot Script Lifecycles
+	- A scene is loaded from disk or created by a script
+	- The root node of the newly instantiated scene is added as a chile of the root viewport or to any child of it
+	
 
