@@ -51,8 +51,14 @@
 	- Velocity: Acceleration * Time
 	- Acceleration: Constant value (Never Changes)
 - Pseudocode Gravity:
-	- # Velocity(0,0), Position(0,0)
-	- # Acceleration = (0, 9.8) # Positive Goes Down
+	- Velocity(0,0), Position(0,0)
+	- Acceleration = (0, 9.8) # Positive Goes Down
 	- Position += Velocity * DeltaTime
 	- Velocity += Acceleration * DeltaTime
+- Pseudocode Jumping:
+	- Movement, Simplified Game
+	- Velocity(0, -400), Position(0,0)
+	- Gravity = (0, 9.81) # Position Goes Down
+	- Position += Velocity * DeltaTime
+	- Velocity += Gravity * DeltaTime
 
