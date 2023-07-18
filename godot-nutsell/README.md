@@ -247,13 +247,13 @@
 				- `InputEventMouse` is mouse inputs
 				```
 				Example:
-				if event is InputEventKey:
-					if event.get_physical_keycode_with_modifiers() == KEY_ALT:
-						# do somethings
-					elif event.get_physical_keycode_with_modifiers() == KEY_CTRL:
-						if not has_node("Child1"): # check this children has or not in the scene
-							self.add_child(Child1)
-							move_child(Child1, 0)
-				else:
-					print(event)
+					if event is InputEventKey:
+						if event.get_physical_keycode_with_modifiers() == KEY_ALT:
+							# do somethings
+						elif event.get_physical_keycode_with_modifiers() == KEY_CTRL:
+							if not has_node("Child1"): # check this children has or not in the scene
+								self.add_child(Child1)
+								move_child(Child1, 0)
+					else:
+						print(event)
 				```
