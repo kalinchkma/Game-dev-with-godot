@@ -257,3 +257,7 @@
 					else:
 						print(event)
 				```
+	- `_exit_tree()` Virtual method:
+		- It called when node exit the seen tree
+		- We can notify other code that we are leaving the scene tree, we can store our node in an array
+		- The easiest thing to do as a bigginer is to delete the node from memory after it has left the scene tree
