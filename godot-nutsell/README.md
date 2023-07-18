@@ -154,10 +154,27 @@
 - Virtual Method:
 	- Virtual method allows subclasses of the base class type that has the virtual method to override the method
 	- For the purpopses of *Godot, all virtual method means is that its methods will be called if the Node is active in the SceneTree
-	- Enter Tree Virtual method( _enter_tree() ):
+	- `_enter_tree()` Virtual method:
 		- Enter Tree is a virtual method, the Node class and all its subclasses provides this virtual method
 		- When to use it:
 			- If you need property values reset and/or some type of action to happened immediately (every
 			  time the node is active on the Scence Tree)
 			- Good for Scenes (Gameobjects) that will be active and inactive, and never released from memory
-
+			- *_enter_tree() is very specialized; prioritize
+			  _ready() over _enter_tree() when setting inital property values
+	- `_ready()` Virtual method:
+		- The `_ready()` function can be used by any class that inherits from the node class
+		- This function gets called in our game loop when a "Permanent" Node is added to the scene tree
+		- If a Node has children, the children Node will have their `_ready()` function triggered first, and
+		  this works its way up to the parent Node
+		- Root Node's `_ready()` function is called last
+		- The `_ready()` method is called only once, will not be called a seconed time
+		- Means removing a Node and adding it back to the scene will not call the _ready() method,
+		  it only call at first initialization
+		- When to use:
+			- Use the ready function when you only want to initialize default property values once 
+			  when an object is created/added to scene
+			- Default Player health, points, items, etc
+	- Delta Time:
+		- Delta time (elapsed time) is a concept used by programmers in relation to hardware and network responsiveness
+		- Delta time comes from the physics/math formula for "The Change in Time"

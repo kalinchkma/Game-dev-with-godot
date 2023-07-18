@@ -2,12 +2,20 @@ extends Node
 
 # Called when enter the tree
 func _enter_tree():
-	print("Enter root in the scene")
+	print(self.name,"Enter in the scene")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# print("Ready function called")
-	pass
+	print(self.name," Ready function called")
+	call_deferred('deleteChildren')
+	
+func deleteChildren():
+	var child1 = get_node('Parent/Child1')
+	self.remove_child(child1)
+	print("child1 deleted")
+	self.add_child(child1)
+	move_child(child1,0)
+	
 
 # Called when input receive
 func _input(event):

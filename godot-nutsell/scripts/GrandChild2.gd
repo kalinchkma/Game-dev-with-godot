@@ -1,7 +1,7 @@
 extends Node
 
 func _enter_tree():
-	print(self.name,"Enter in the scene")
+	print(self.name," Enter the scene")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

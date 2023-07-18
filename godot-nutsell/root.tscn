@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhuh2rujsbrd5"]
+[gd_scene load_steps=9 format=3 uid="uid://dhuh2rujsbrd5"]
 
 [ext_resource type="Script" path="res://scripts/Root.gd" id="1_120e6"]
 [ext_resource type="Script" path="res://scripts/Parent.gd" id="2_tmxmm"]
 [ext_resource type="Script" path="res://scripts/Child1.gd" id="2_urtmy"]
 [ext_resource type="Script" path="res://scripts/GrandChild1.gd" id="4_vn4ha"]
 [ext_resource type="Script" path="res://scripts/Child2.gd" id="5_inpt3"]
+[ext_resource type="Script" path="res://scripts/GreatGrandChild1.gd" id="5_qiipj"]
+[ext_resource type="Script" path="res://scripts/GrandChild2.gd" id="6_kkr3p"]
+[ext_resource type="Script" path="res://scripts/Child2GrandChild1.gd" id="8_smhwg"]
 
 [node name="Root" type="Node"]
 script = ExtResource("1_120e6")
@@ -18,5 +21,14 @@ script = ExtResource("2_urtmy")
 [node name="GrandChild1" type="Node" parent="Parent/Child1"]
 script = ExtResource("4_vn4ha")
 
+[node name="GreatGrandChild1" type="Node" parent="Parent/Child1/GrandChild1"]
+script = ExtResource("5_qiipj")
+
+[node name="GrandChild2" type="Node" parent="Parent/Child1"]
+script = ExtResource("6_kkr3p")
+
 [node name="Child2" type="Node" parent="Parent"]
 script = ExtResource("5_inpt3")
+
+[node name="Child2GrandChild1" type="Node" parent="Parent/Child2"]
+script = ExtResource("8_smhwg")

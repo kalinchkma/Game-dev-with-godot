@@ -1,11 +1,11 @@
 extends Node
 
 func _enter_tree():
-	print("Enter Parent in the scene")
+	print(self.name, "Enter in the scene")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print(self.name,"Ready function call")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
