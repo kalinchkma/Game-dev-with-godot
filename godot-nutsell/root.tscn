@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhuh2rujsbrd5"]
+[gd_scene load_steps=16 format=3 uid="uid://dhuh2rujsbrd5"]
 
 [ext_resource type="Script" path="res://scripts/Root.gd" id="1_120e6"]
 [ext_resource type="Script" path="res://scripts/Parent.gd" id="2_tmxmm"]
@@ -8,8 +8,18 @@
 [ext_resource type="Script" path="res://scripts/GreatGrandChild1.gd" id="5_qiipj"]
 [ext_resource type="Texture2D" uid="uid://dulgxqsgrqte1" path="res://icon.svg" id="6_1crf2"]
 [ext_resource type="Script" path="res://scripts/GrandChild2.gd" id="6_kkr3p"]
+[ext_resource type="Texture2D" uid="uid://dnoy214rmkhym" path="res://csgo.png" id="8_n0h2q"]
 [ext_resource type="Script" path="res://scripts/Child2GrandChild1.gd" id="8_smhwg"]
 [ext_resource type="Script" path="res://scripts/GUI.gd" id="9_ac7jc"]
+[ext_resource type="Script" path="res://scripts/Parent2.gd" id="12_663a3"]
+[ext_resource type="Shader" path="res://shader/box.gdshader" id="12_uj88l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0ahs0"]
+shader = ExtResource("12_uj88l")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_gvl1o"]
+texture_filter = 2
+texture_repeat = 3
 
 [node name="Root" type="Node"]
 script = ExtResource("1_120e6")
@@ -27,11 +37,16 @@ script = ExtResource("4_vn4ha")
 script = ExtResource("5_qiipj")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parent/Child1/GrandChild1/GreatGrandChild1"]
-position = Vector2(458, 204)
+position = Vector2(134, 156)
 texture = ExtResource("6_1crf2")
 
 [node name="GrandChild2" type="Node" parent="Parent/Child1"]
 script = ExtResource("6_kkr3p")
+
+[node name="csgo" type="Sprite2D" parent="Parent/Child1/GrandChild2"]
+position = Vector2(116, 353)
+scale = Vector2(0.729412, 0.682353)
+texture = ExtResource("8_n0h2q")
 
 [node name="Child2" type="Node" parent="Parent"]
 script = ExtResource("5_inpt3")
@@ -45,3 +60,13 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_ac7jc")
+
+[node name="Parent2" type="Node" parent="."]
+script = ExtResource("12_663a3")
+
+[node name="Box" type="Sprite2D" parent="Parent2"]
+material = SubResource("ShaderMaterial_0ahs0")
+use_parent_material = true
+position = Vector2(245.25, 122.25)
+scale = Vector2(80.06, 57.366)
+texture = SubResource("CanvasTexture_gvl1o")

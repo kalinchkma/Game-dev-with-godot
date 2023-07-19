@@ -280,3 +280,20 @@
 						self.queue_free()
 			  ```
 			
+	- Adding and removing from scene tree:
+		- add_child(<node object>)
+		- remove_child(<node object>)
+		- Removing an Object/Node from the scene tree does not remove the Node from Memory
+		- You need to use Object.free() or Node.queue_free() (depends on the node)
+		- When a node is added to the scene tree, it is called an "Active Node"
+		- When a node is removed from the scene it is called an "Oprhaned Node"
+	- Memory Leaks:
+		- Godot manage memory manually that's means we as a programmer we have to manage memory ourself
+		- One way to make better perpofmence is object pooling 
+	- Tween Pseudocode that use to create a health bar:
+		```
+			var tween = Tween.new()
+			tween.interpolate_property(...)
+			add_child(tween)
+			tween.start()
+		```
