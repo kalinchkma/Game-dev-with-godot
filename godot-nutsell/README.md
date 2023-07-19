@@ -137,7 +137,7 @@
 	- Create/Start -> Exits -> Destroy/End
 - Godot Script Lifecycles
 	- A scene is loaded from disk or created by a script
-	- The root node of the newly instantiated scene is added as a chile of the root viewport or to any child of it
+	- The root node of the newly instantiated scene is added as a child of the root viewport or to any child of it
 	- Every node of the newly added scene will receive the enter_tree() notification in top to bottom order.
 	- The ready() notification is called when a node and all its children are inside the active scene
 	- While the object is active in the scene callbacks such as the _input(), _process(), _physics_process() are called if used.
@@ -297,3 +297,7 @@
 			add_child(tween)
 			tween.start()
 		```
+
+#### Pivot Point:
+	- Pivot point is the reference point for positioning, rotating and scaling a game object
+	- Pivot point is where the transform portion of our Node object gets affected at
