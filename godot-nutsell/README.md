@@ -299,5 +299,5 @@
 		```
 
 #### Pivot Point:
-	- Pivot point is the reference point for positioning, rotating and scaling a game object
-	- Pivot point is where the transform portion of our Node object gets affected at
+- Pivot point is the reference point for positioning, rotating and scaling a game object
+- Pivot point is where the transform portion of our Node object gets affected at
