@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bour6pw0xpfpf"]
+
+[ext_resource type="Script" path="res://scripts/hero_wraparound.gd" id="1_1deef"]
+[ext_resource type="Texture2D" uid="uid://pfyfptlf8os0" path="res://dragon.png" id="2_eguws"]
+
+[node name="hero_wraparound" type="Node2D"]
+script = ExtResource("1_1deef")
+
+[node name="wrap_hero" type="Sprite2D" parent="."]
+texture = ExtResource("2_eguws")

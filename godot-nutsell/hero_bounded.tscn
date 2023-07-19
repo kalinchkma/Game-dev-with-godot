@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbf06oc4tvr5f"]
+
+[ext_resource type="Texture2D" uid="uid://c5hpq4rtht538" path="res://linux.jpg" id="1_hn7c5"]
+[ext_resource type="Script" path="res://scripts/Hero.gd" id="2_8ejxa"]
+
+[node name="Hero_bounded" type="Sprite2D"]
+visible = false
+position = Vector2(-934, 513)
+scale = Vector2(0.285714, 0.261682)
+texture = ExtResource("1_hn7c5")
+script = ExtResource("2_8ejxa")
+acceleration = 400.0

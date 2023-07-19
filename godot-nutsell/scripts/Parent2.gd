@@ -4,9 +4,9 @@ var timerNode
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	# addRemoveTimerWithScript()
+	addRemoveTimerWithScript()
 	# addRemoveDeleteTimerNode()
-	addTimeNode()
+	# addTimeNode()
 	# addRemoveTimeNode()
 	pass
 

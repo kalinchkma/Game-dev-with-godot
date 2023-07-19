@@ -392,3 +392,17 @@
 #### Hierarchy:
 - CanvasItems class -> Sprite Class -> Texture Class -> Image Class
 
+---
+#### Writing Code:
+- Readable
+- Maintainable
+- Testable
+
+#### Input Map:
+- Godots Easiest Way of Handling/ Editing Player Inputs
+- Using InputMaps
+	- We can use Input Singleton
+	- Ex: `Input.is_action_pressed("ui_left")`
+- InputMaps Singleton that manages InputEventActions (InputEvents)
+- If you want to add/edit/delete an input mapping during runtime, you can do so with the InputMap singleton
+
