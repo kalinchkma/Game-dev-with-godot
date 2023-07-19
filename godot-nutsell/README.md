@@ -342,5 +342,53 @@
 	- Keep in mind Godot defaults to Landscape 
 		- To set screen orientation use:
 			- DisplayServer.screen_set_orientation(screen_orientation)
-- 
+- Different devices will have different resolutions, if your game view is in Fullscreen and adjusts to the devices resolution, images will be affected
+- Godot offers us a way through project settings to handle this for us automatically
+- Setting in Project settings > Display > Window > Stretch
+
+#### CanvasItem class:
+- set_visible(bool)
+- is_visible() -> bool
+- hide()
+- show()
+
+#### Sprite Class:
+- Used with the Sprite Node
+- Display a 2D texture (Sprite Sheets)
+- Cannot Edit Image Directly
+- Properties of Sprite
+	- offset
+		- set_offset(Vector2)
+		- get_offset() -> Vector2
+	- How it affects your sprite depends on the centered property
+	- centerd:
+		- set_centered(bool)
+		- is_offset() -> bool 
+	- texture(Object to draw, example: Image)
+		- set_texture(Texture)
+		- get_texture() -> Texture
+
+#### Texture Class:
+- Texture are items you create by loading from a file
+- Texture is a base for other resources, it cannot be used directly
+- Your Image/png is a Stream Texture < Texture
+- Cannot edit image directly through texture class
+- Methods:
+	- get_size() -> Vector2
+	- get_height() -> int
+	- get_width() -> int
+
+#### Image Class:
+- Native Image datatype and contains your image data, which is then/can be converted to texture
+- Here we can edit our image file
+- get_size() -> Vector2
+- get_height() -> int
+- get_width() -> int
+- resize(int width, int height, Interpolation = 1)
+- shrink_x2() -> void
+- expand_x2_hq2x() -> void
+- save_png("save file path")
+
+#### Hierarchy:
+- CanvasItems class -> Sprite Class -> Texture Class -> Image Class
 
