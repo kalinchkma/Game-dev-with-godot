@@ -334,4 +334,13 @@
 			- OS.set_window_position(Vector2(0, 0))
 		- Now window handle by DisplayServer:
 			- It has a lot of method getter and setter
+#### Game Scaling:
+- In mobile development
+	- Always good practice to design a game for portrait or landscape orientation, never both
+	- SCREEN_ORIENTATION_LANDSCAPE = 0
+	- SCREEN_ORIENTATION_PORTRATE = 1
+	- Keep in mind Godot defaults to Landscape 
+		- To set screen orientation use:
+			- DisplayServer.screen_set_orientation(screen_orientation)
+- 
 

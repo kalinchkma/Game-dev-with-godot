@@ -16,6 +16,7 @@ func _unhandled_input(event):
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		elif event.get_physical_keycode_with_modifiers() == KEY_ESCAPE:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
