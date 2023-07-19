@@ -25,7 +25,8 @@ func _unhandled_input(event):
 	print(self.name, "unhandled_input called")
 	if event is InputEventKey:
 		if event.get_physical_keycode_with_modifiers() == KEY_ALT:
-			call_deferred('deleteChildren')
+			if has_node('Child1'):
+				call_deferred('deleteChildren')
 		elif event.get_physical_keycode_with_modifiers() == KEY_CTRL:
 			if not has_node("Child1"):
 				self.add_child(Child1)
