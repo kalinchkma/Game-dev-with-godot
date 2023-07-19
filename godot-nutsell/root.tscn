@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhuh2rujsbrd5"]
+[gd_scene load_steps=17 format=3 uid="uid://dhuh2rujsbrd5"]
 
 [ext_resource type="Script" path="res://scripts/Root.gd" id="1_120e6"]
 [ext_resource type="Script" path="res://scripts/Parent.gd" id="2_tmxmm"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scripts/GUI.gd" id="9_ac7jc"]
 [ext_resource type="Script" path="res://scripts/Parent2.gd" id="12_663a3"]
 [ext_resource type="Shader" path="res://shader/box.gdshader" id="12_uj88l"]
+[ext_resource type="Script" path="res://scripts/WindowControl.gd" id="14_68ja6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ahs0"]
 shader = ExtResource("12_uj88l")
@@ -70,3 +71,10 @@ use_parent_material = true
 position = Vector2(245.25, 122.25)
 scale = Vector2(80.06, 57.366)
 texture = SubResource("CanvasTexture_gvl1o")
+
+[node name="WindowControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("14_68ja6")

@@ -298,6 +298,40 @@
 			tween.start()
 		```
 
-#### Pivot Point:
+#### Pivot Point or Offsets:
 - Pivot point is the reference point for positioning, rotating and scaling a game object
 - Pivot point is where the transform portion of our Node object gets affected at
+
+#### Windows Basic:
+- Understanding window resulation is fundamental to game programming
+- With most games its beneficial to understand how we can retrieve and edit the game view resolution
+- Resolution is expressed as (width x height)
+	- 1920 x 1080 -> Aspect Ratio 16:9 (x120)
+- The aspect ratio of an image is the ratio of its width to its height. 
+  It is commonly expressed as two numbers separated by a colon
+- Window in Godot:
+	- Godot has two different window values we can retrieve
+		- 1 Player device Screen/Resolution(Laptop, Monitor, Cellphone)
+		- 2 Game Window/Resolution Size (Our game)
+
+- Godot global OS singleton class:
+	- godot provide getter method only
+	- `screen = OS.get_screen_size()`
+	- it return a Vector2(float x, float y)
+	- Game view resolution:
+		- Depricated:
+			- setter
+			- vector2 = Vector2(float x, float y)
+			- OS.set_window_size(vector2)
+			- Getter
+			- OS.get_window_size()
+			- getter method
+			- OS.is_window_resizeable() return boolean
+			- setter method
+			- OS.set_window_resizeable(false) take boolean
+			- adjust game resolution 
+			- OS.set_window_size(max)
+			- OS.set_window_position(Vector2(0, 0))
+		- Now window handle by DisplayServer:
+			- It has a lot of method getter and setter
+

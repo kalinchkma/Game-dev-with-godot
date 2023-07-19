@@ -4,12 +4,14 @@ var Child1
 
 func _enter_tree():
 	print(self.name, "Enter in the scene")
-
+	print(ProjectSettings.get_setting("display/window/size/viewport_width"))
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Child1 = get_node('Child1')
 	print(self.name,"Ready function call")
 	
+
 
 func deleteChildren():
 	self.remove_child(Child1)
