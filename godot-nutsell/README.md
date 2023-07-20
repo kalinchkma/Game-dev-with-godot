@@ -523,3 +523,23 @@
 ```
 $path or get_node("path")
 ```
+
+#### Physics
+
+- For 2D Physics and collisions
+- Area2D:
+  - An area that can check if another body entered
+  - This area also can moved by changing the position
+  - Ex: Check if player entered a house
+- StaticBody2D:
+  - A static body that other bodies collied with
+  - Not supposed to be moved
+  - Ex: Any static object: Walls,beds,obstacles
+- RigidBody2D:
+  - Moving body that moves via physics (like a cannonball)
+  - Set an initial velocity
+  - Ex: The grenade
+- CharacterBody2D:
+  - Moving body controlled by code
+  - Inbuilt method
+  - Ex: Any entity that is controlled by code: The player & all enimies
