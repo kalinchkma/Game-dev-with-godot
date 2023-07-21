@@ -543,3 +543,26 @@ $path or get_node("path")
   - Moving body controlled by code
   - Inbuilt method
   - Ex: Any entity that is controlled by code: The player & all enimies
+
+#### Signals
+
+- When a certain action happens to a node:
+  - A body entering an area, a timer running out 2 bodies colliding signals
+    trigger there
+  - You can tell the affected node to send a signal, which basically means that
+    you are running a function
+  - This is incredibly powerful to make nodes communicate with each other!
+
+#### Create custom scenes in code:
+
+- Most important part of game dev to create a game scene in code
+- Step to create custom scenes in code:
+
+  - We need to `create a scene`
+  - We need to `create` an `instance` of the scene
+  - We need to `add` the scene to the node tree
+
+- `position` vs `global_position`:
+  - `position` is a local position, They are relative to the parent
+  - `global_position` are an exact pixel coordinate that is independent from any
+    parent
