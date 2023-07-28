@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://bour6pw0xpfpf"]
+[gd_scene load_steps=4 format=3 uid="uid://bour6pw0xpfpf"]
 
 [ext_resource type="Script" path="res://scripts/hero_wraparound.gd" id="1_1deef"]
 [ext_resource type="Texture2D" uid="uid://pfyfptlf8os0" path="res://dragon.png" id="2_eguws"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2oeh"]
 
 [node name="hero_wraparound" type="Node2D"]
 script = ExtResource("1_1deef")
 
 [node name="wrap_hero" type="Sprite2D" parent="."]
 texture = ExtResource("2_eguws")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("RectangleShape2D_m2oeh")
