@@ -586,4 +586,18 @@ $path or get_node("path")
 - For Separate Images:
   - AnimatedSprite2D
 - For SpriteSheet:
+
   - Sprite2D (it has an animation tab)
+
+- AnimationPlayer
+
+  - It plays an animation
+  - By animation we mean any kind of change in property (so move, rotation,
+    animation frames, light energy etc)
+  - We can also call it methods
+  - And you get lots of control over these changes
+
+- Tweens
+  - Tweens are not a node
+  - Tweens are an object we can create in the script of a node and then this
+    tween object can interpolate between 2 values
