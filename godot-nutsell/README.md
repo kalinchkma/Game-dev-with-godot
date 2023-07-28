@@ -566,3 +566,24 @@ $path or get_node("path")
   - `position` is a local position, They are relative to the parent
   - `global_position` are an exact pixel coordinate that is independent from any
     parent
+
+#### Camera
+
+- Camera2D
+
+#### Tilemaps
+
+- Tile - a single graphic
+- Tileset - a combination of tiles
+- Tilemap - A godot Node that organizes tilesets
+
+#### Animations 2D
+
+- Animations works by playing images in sequence
+- But images can be in 2 formats:
+  - As separate images
+  - or in a spritesheet
+- For Separate Images:
+  - AnimatedSprite2D
+- For SpriteSheet:
+  - Sprite2D (it has an animation tab)
